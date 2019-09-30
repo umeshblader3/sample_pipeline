@@ -1,0 +1,11 @@
+pipelineJob('example1') {
+    definition {
+        cpsScm {
+            lightweight(true)
+            scm {
+              github('umeshblader3/sample_pipeline')  
+            }
+            scriptPath('dsls/pipeline1.dsl')
+        }
+    }
+}
