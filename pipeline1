@@ -1,12 +1,7 @@
 pipelineJob('example1') {
     definition {
-        cpsScm {
-            lightweight(true)
-            scm {
-              // github('umeshblader3/sample_pipeline', 'master')
-              script(readFileFromWorkspace('dsls/pipeline1.dsl'))
-            }
-            scriptPath('dsls/pipeline1.dsl')
+        cps {
+            script(readFileFromWorkspace('inocrm1', 'dsls/pipeline1.dsl'))
         }
     }
 }
